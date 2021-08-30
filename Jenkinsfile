@@ -2,7 +2,7 @@ import groovy.json.JsonOutput
 pipeline {
    agent any
    triggers {
-      cron('* * * * *')
+      cron('*/5 * * * *')
    }
    stages {
       stage('stage1') {
