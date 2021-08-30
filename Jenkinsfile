@@ -1,7 +1,7 @@
 pipeline {
     agent any
     triggers {
-        cron('*/10 * * * *')
+        cron('*/2 * * * *')
     }
     stages {
         stage('stage1') {
@@ -20,7 +20,7 @@ pipeline {
         stage('stage2') {
             steps {
                 echo "running stage 2"
-                echo "Periodic: ${env.IS_PERIODIC_BUILD}"
+                sh 'script.sh'
             }
         }
     }
