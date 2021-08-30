@@ -20,7 +20,7 @@ pipeline {
         stage('stage2') {
             steps {
                 echo "running stage 2"
-                sh 'script.sh'
+                sh './script.sh'
             }
         }
     }
